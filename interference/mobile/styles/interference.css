@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+body {
+    height: 442px;
+    text-align: center;
+}
+
+.filter {
+	display: inline-block;
+	position: relative;
+	top: 20px;
+	right: 51px;
+}
+
+.specimenImage {
+	height: 175px;
+	width: 175px;
+}
+
+.controlBack {
+	height: 71px;
+}
+
+.controlPanelBack {
+	display: inline-block;
+	height: 61px;
+	width: 335px;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.lineA {
+	display: inline-block;
+	background-color: black;	
+	position: absolute;
+	height: 2px;
+	width: 40px;
+	top: 31px;
+	left: 124px;
+}
+
+.lineB {
+	display: inline-block;
+	background-color: black;
+	position: absolute;
+	height: 2px;
+	width: 19px;
+	top: 193px;
+	left: 136px;
+}
+
+.lineC {
+	display: inline-block;
+	background-color: black;
+	position: absolute;
+	height: 20px;
+	width: 2px;
+	top: 199px;
+	left: 99px;
+}
+
+
+#mainCan {
+	position: absolute;
+	left: 0px;
+	width: 323px;
+	height: 290px;
+	top: 5px;
+}
+
+.mPos {
+	position: absolute;
+	top: 188px;
+	left: 158px;
+}
+.cPos {
+	position: absolute;
+	top: 221px;
+	left: 94px;
+}
+.iPos {
+	position: absolute;
+	top: 5px;
+	left: 14px;
+}
+.oPos {
+	position: absolute;
+	top: 15px;
+	left: 144px;
+}
+.pPos {
+	position: absolute;
+	top: 265px;
+	left: 43px;
+}
+
+#reflected {
+	position: absolute;
+	top: 93px;
+	left: 4px;
+}
+#transmitted {
+	position: absolute;
+	top: 93px;
+	left: 232px;
+}
+
+.samplePanelLeft {
+	margin-right: 40px;
+}
+
+#btn {
+	display: inline-block;
+	height: 26px;
+	position: relative;
+	margin-top: 5px;
+	width: 100px;
+}
+
+#slider {
+	display: inline-block;
+	position: relative;	
+	width: 100px;
+	margin-top: 5px;
+}
+
+.whiteWindow {
+  display:inline-block;
+  height: 300px;
+  width: 323px;
+  position: absolute;
+  top: 49px;
+  left: 21px;

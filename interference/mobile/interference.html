@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<HEAD>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/interference.css" />
+</HEAD>
+<BODY>
+	<DIV CLASS="mainscene">
+	   <CANVAS ID="tutorialTitle">Interference Filters</CANVAS>
+
+	   <DIV CLASS="whiteWindow">
+	   <IMG CLASS="filter" SRC="images/filter.jpg" />
+	   <CANVAS ID="mainCan"></CANVAS>
+	   <DIV CLASS="mPos"><LABEL CLASS="diagramTextBlack">Metallic<br /> Layer</LABEL></DIV>
+	   <DIV CLASS="cPos"><LABEL CLASS="diagramTextBlack">Cavity</LABEL></DIV>
+	   <DIV CLASS="iPos"><LABEL CLASS="diagramTextBlack">Incident<br /> Light<br /> Wave</LABEL></DIV>
+	   <DIV CLASS="oPos"><LABEL CLASS="diagramTextBlack">Optical-Grade<br />Glass<br />Substrate</LABEL></DIV>
+	   <DIV CLASS="pPos"><LABEL CLASS="diagramTextBlack">Peak Wavelength: <LABEL CLASS="diagramBlackText" ID="peak"></LABEL></LABEL></LABEL></DIV>
+	   <DIV CLASS="lineA"></DIV>
+	   <DIV CLASS="lineB"></DIV>
+	   <DIV CLASS="lineC"></DIV>
+
+	   <DIV ID="reflected"><LABEL CLASS="diagramTextBlack">Reflected<br />Light Waves<br />(Destructive<br />Interference)</LABEL></DIV>
+	   <DIV ID="transmitted"><LABEL CLASS="diagramTextBlack">Transmitted<br />Light<br />Waves<br />(Constructive<br />Interference)</LABEL></DIV>
+
+	   </DIV>
+	    
+	    <DIV CLASS="controlBack">
+	    	<DIV CLASS="controlPanelBack">
+	    	<LABEL ID="angleRead" CLASS="controlPanelText"></LABEL>
+	    		<DIV ID="slider"></DIV>
+	    		
+	    	</DIV>
+	    </DIV>
+
+	    <DIV ID="splashContainer"></DIV>
+	</DIV>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/TweenLite.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/CSSPlugin.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/EasePack.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/jquery.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/OlyUtil.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/interference.js"></SCRIPT>
+</BODY>

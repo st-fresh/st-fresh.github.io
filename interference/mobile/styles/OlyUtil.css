@@ -109,7 +109,7 @@ body:hover {
 }*/
 
 #tutorialTitle {
-    display: none;  
+    display: none !important;   
 }
 
 .tutorialTitle {

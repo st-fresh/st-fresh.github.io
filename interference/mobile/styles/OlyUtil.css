@@ -103,9 +103,13 @@ body:hover {
     box-sizing: border-box;
 }
 
-#tutorialTitle {
+/*#tutorialTitle {
     margin: 15px auto;
     position: relative;    
+}*/
+
+#tutorialTitle {
+    display: none;  
 }
 
 .tutorialTitle {
@@ -162,6 +166,7 @@ body:hover {
     left: 0px;
     right: 0px;
     position: absolute;
+    top: 349px;
 }
 
 .controlPanelBack {

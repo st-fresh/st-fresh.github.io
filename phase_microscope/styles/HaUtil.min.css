@@ -1,0 +1,712 @@
+@charset "utf-8";
+
+/*CSS Reset.  
+This kills certain properties in hamamamatsu.css that may affect
+elements within the tutorial section.*/
+.ha-tutorial img {
+    padding: 0;
+}
+
+/*Main Tutorial Windows*/
+.ha-tutorial {
+    border: solid 4px #94a4b0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: white;
+    cursor: default;
+    font: bold 12px/1 Arial;
+    margin: 10px auto 0 auto;
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.ha-tutorial:before {
+    background-image: linear-gradient(#d3d9de, white);
+    background-image: -moz-linear-gradient(#d3d9de, white);
+    background-image: -o-linear-gradient(#d3d9de, white);
+    background-image: -webkit-linear-gradient(#d3d9de, white);
+    border: solid 3px white;
+    border-radius: 9px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    content: '';
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.ha-mainscene {
+    border-radius: 9px;
+    height: 100%;
+    margin: 3px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    visibility: hidden;
+}
+
+/*Loading Windows*/
+.ha-splashContainer {
+    background-image: linear-gradient(#d3d9de, white);
+    background-image: -moz-linear-gradient(#d3d9de, white);
+    background-image: -o-linear-gradient(#d3d9de, white);
+    background-image: -webkit-linear-gradient(#d3d9de, white);
+    border: solid 3px white;
+    border-radius: 9px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    top: 0px; 
+    transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    width: 100%; 
+    z-index: 1;
+}
+
+.ha-splashBackground {
+    background-color: white;
+    border: solid 2px #ccc;
+    border-radius: 9px;
+    height: 210px;
+    left: 50%;
+    margin: -107px 0 0 -207px;
+    position: absolute;
+    top: 50%;
+    width: 410px;
+    z-index: 1;
+}
+
+.ha-splashGraphContainer {
+    animation: graphContAnim 0.25s ease-out 0.4s 1 normal forwards;
+    -webkit-animation: graphContAnim 0.25s ease-out 0.4s 1 normal forwards;
+    height: 88px;
+    left: 30px;
+    opacity: 0;
+    position: absolute;
+    top: 58px;
+    transform: translateY(-30px) scaleY(0.25);
+    -webkit-transform: translateY(-30px) scaleY(0.25);
+    width: 350px;
+}
+
+.ha-splashGraphContainerReverse {
+    animation: splashFadeOut 0.25s ease-in .25s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.25s ease-in .25s 1 normal forwards;
+    opacity: 1;
+    transform: translateY(0px) scaleY(1);
+    -webkit-transform: translateY(0px) scaleY(1);
+}
+
+@keyframes graphContAnim {
+    75%     {transform: translateY(2px) scaleY(1.1);}
+    100%    {opacity: 1; transform: translateY(0px) scaleY(1);}
+}
+@-webkit-keyframes graphContAnim {
+    75%     {-webkit-transform: translateY(2px) scaleY(1.1);}
+    100%    {opacity: 1; -webkit-transform: translateY(0px) scaleY(1);}
+}
+
+.ha-splashGraphBack {
+    animation: splashGraphBackAnim 0.25s ease-out 0.55s 1 normal forwards;
+    -webkit-animation: splashGraphBackAnim 0.25s ease-out 0.55s 1 normal forwards; 
+    height: 70px;
+    left: 6px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transform: translateY(-30px) scaleY(0);
+    -webkit-transform: translateY(-30px) scaleY(0);
+    width: 332px;
+}
+
+.ha-splashGraphBackReverse {
+    animation: splashFadeOut 0.25s ease-in .15s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.25s ease-in .15s 1 normal forwards;
+    opacity: 1;
+    transform: translateY(0px) scaleY(1);
+    -webkit-transform: translateY(0px) scaleY(1);
+}
+
+@keyframes splashGraphBackAnim {
+    75%     {transform: translateY(2px) scaleY(1.1);}
+    100%    {opacity: 1; transform: translateY(0px) scaleY(1);}
+}
+@-webkit-keyframes splashGraphBackAnim {
+    75%     {-webkit-transform: translateY(2px) scaleY(1.1);}
+    100%    {opacity: 1; -webkit-transform: translateY(0px) scaleY(1);}
+}
+
+.ha-splashLogo {
+    animation: splashLogoAnim 0.35s ease-out 0.25s 1 normal forwards;
+    -webkit-animation: splashLogoAnim 0.35s ease-out 0.25s 1 normal forwards;
+    height: 26px;
+    left: 15px;
+    opacity: 0;
+    position: absolute;
+    top: 21px;
+    transform: translateY(17px);
+    -webkit-transform: translateY(17px);
+    width: 380px;
+}
+
+.ha-splashLogoReverse {
+    animation: splashLogoAnimReverse 0.45s ease-in 0s 1 normal forwards;
+    -webkit-animation: splashLogoAnimReverse 0.45s ease-in 0s 1 normal forwards;
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
+@keyframes splashLogoAnim {
+    75%     {transform: translateY(-2px);}
+    100%    {opacity: 1; transform: translateY(0px);}
+}
+@-webkit-keyframes splashLogoAnim {
+    75%     {-webkit-transform: translateY(-2px);}
+    100%    {opacity: 1; -webkit-transform: translateY(0px);}
+}
+
+@keyframes splashLogoAnimReverse {
+    25%     {transform: translateY(-2px);}
+    100%    {opacity: 0; transform: translateY(17px);}
+}
+@-webkit-keyframes splashLogoAnimReverse {
+    25%     {-webkit-transform: translateY(-2px);}
+    100%    {opacity: 0; -webkit-transform: translateY(17px);}
+}
+
+.ha-splashNumberContainer {
+    left: 26px;
+    position: absolute;
+    top: 152px;
+}
+
+.ha-splashNumberContainerReverse {
+    animation: splashFadeOut 0.2s ease-in 0s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.2s ease-in 0s 1 normal forwards;
+}
+
+.ha-splashText {
+    color: #333;
+    font: bold 14px/1 Arial;
+    opacity: 0;
+    position: absolute;
+    text-shadow: 0 0 3px rgba(51, 51, 51, 0.35);
+}
+
+.ha-splashTextLoad {
+    animation: splashTextLoadAnim 0.2s ease-out 0.55s 1 normal forwards;
+    -webkit-animation: splashTextLoadAnim 0.2s ease-out 0.55s 1 normal forwards;
+    left: 0;
+    top: 175px;
+    transform: translateY(34px);
+    -webkit-transform: translateY(34px);
+    width: 100%;
+}
+
+.ha-splashTextLoadReverse {
+    animation: splashFadeOut 0.2s ease-in 0s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.2s ease-in 0s 1 normal forwards;
+    opacity: 1; 
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
+@keyframes splashTextLoadAnim {
+    75%     {transform: translateY(-4px);}
+    100%    {opacity: 1; transform: translateY(0px);}
+}
+@-webkit-keyframes splashTextLoadAnim {
+    75%     {-webkit-transform: translateY(-4px);}
+    100%    {opacity: 1; -webkit-transform: translateY(0px);}
+}
+
+.ha-splashTextNum {
+    animation: splashTextNumAnim 0.2s ease-out 0.7s 1 normal forwards;
+    -webkit-animation: splashTextNumAnim 0.2s ease-out 0.7s 1 normal forwards;
+    left: 0;
+    top: 0;
+    transform: translateY(-17px);
+    -webkit-transform: translateY(-17px);
+    width: 30px;
+}
+
+@keyframes splashTextNumAnim {
+    75%     {transform: translateY(2px);}
+    100%    {opacity: 1; transform: translateY(0px);}
+}
+@-webkit-keyframes splashTextNumAnim {
+    75%     {-webkit-transform: translateY(2px);}
+    100%    {opacity: 1; -webkit-transform: translateY(0px);}
+}
+
+.ha-splashCurveFill {
+    clip: rect(0, 0, 64px, 0);
+    height: 64px;
+    left: 8px;
+    position: absolute;
+    top: 10px;
+    width: 328px;
+}
+
+.ha-splashCurveFillReverse {
+    animation: splashFadeOut 0.25s ease-in 0.05s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.25s ease-in 0.05s 1 normal forwards;
+}
+
+.ha-splashCurve {
+    animation: splashCurveAnim 0.25s ease-out 0.65s 1 normal forwards;
+    -webkit-animation: splashCurveAnim 0.25s ease-out 0.65s 1 normal forwards;
+    left: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 3px;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    width: 328px;
+}
+
+.ha-splashCurveReverse {
+    animation: splashFadeOut 0.25s ease-in 0.1s 1 normal forwards;
+    -webkit-animation: splashFadeOut 0.25s ease-in 0.1s 1 normal forwards;
+    opacity: 1;
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+@keyframes splashCurveAnim {
+    75%     {transform: scaleY(1.1);}
+    100%    {opacity: 1; transform: scaleY(1);}
+}
+@-webkit-keyframes splashCurveAnim {
+    75%     {-webkit-transform: scaleY(1.1);}
+    100%    {opacity: 1; -webkit-transform: scaleY(1);}
+}
+
+@keyframes splashFadeOut {
+    100%    {opacity: 0;}
+}
+@-webkit-keyframes splashFadeOut {
+    100%    {opacity: 0;}
+}
+
+/*Content Windows*/
+.ha-tutorialTitle {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    color: #333;
+    display: inline-block;
+    font: bold 22px/1 Arial;
+    padding: 6px 14px 9px 14px;
+    position: relative;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(51,51,51,.3);
+}
+
+.ha-controlBack {
+    background-color: rgba(148, 164, 176, 0.25);
+    border-radius: 8px;
+}
+
+.ha-mainWindow, .ha-readOutText {
+    background-image: linear-gradient(#1f4250, #081014);
+    background-image: -moz-linear-gradient(#1f4250, #081014);
+    background-image: -o-linear-gradient(#1f4250, #081014);
+    background-image: -webkit-linear-gradient(#1f4250, #081014);
+    border: solid 3px #bec7cd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.ha-whiteWindow {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 7px white;
+    margin: 20px;
+    position: absolute;
+}
+
+.ha-specimenWindow {
+    background-color: black;
+    border: solid 2px #d9dce1;
+    box-shadow: 0 0 10px black;
+}
+
+.ha-specimenWindow2 {
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+.ha-keyInfoWindow {
+    background-image: linear-gradient(
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -moz-linear-gradient(
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -o-linear-gradient(
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -webkit-linear-gradient(
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+}
+
+.ha-keyReadOutBox{
+    background-image: linear-gradient(left,
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -moz-linear-gradient(left,
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -o-linear-gradient(left,
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    background-image: -webkit-linear-gradient(left,
+        rgba(210, 0, 0, 0.75), rgba(110, 0, 0, 0.75));
+    border-radius: 8px;
+    box-shadow: 0 0 2px white,
+                0 0 2px black;
+    position: absolute;
+}
+
+.ha-labelText {
+    color: white;
+    position: absolute;
+    text-shadow: 0 0 3px rgba(51, 51, 51, 0.5);
+}
+
+.ha-windowText {
+    color: #d9dce1;
+    text-shadow: 0 0 3px rgba(51, 51, 51, 0.5);
+}
+
+.ha-readOutText {
+    color: white;
+    font: 700 16px/1 Arial; 
+    height: 30px;
+    padding: 4px 3px 0 0;
+    text-align: right;
+}
+
+.ha-infoText {
+    font-weight: 300;
+}
+
+.ha-graphText {
+    color: #333;
+}
+
+.ha-graphUnitText {
+    font-size: 11px;
+}
+
+.ha-controlText {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: #435661;
+    font: bold 12px/1 Arial;
+    padding: 3px;
+    text-align: center;
+}
+
+.ha-unitText {
+    color: #7b899a;
+}
+
+/*-------------- HaComponent Styles -----------------*/
+.ha-webkitMaskOverflowFix {
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);    
+}
+
+/*-------------- HaSlider Styles -----------------*/
+.ha-slider {
+    cursor: pointer;
+    height: 28px;
+    transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s linear;
+}
+
+.ha-sliderTrackBorder {
+    background-color: rgba(200, 208, 215, 1);
+    border-radius: 7px;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 100%;
+}
+
+.ha-sliderTrackFill {
+    background-image: linear-gradient(#83888a, #89969a);
+    background-image: -moz-linear-gradient(#83888a, #89969a);
+    background-image: -o-linear-gradient(#83888a, #89969a);
+    background-image: -webkit-linear-gradient(#83888a, #89969a);
+    border-radius: 4px;
+    height: 8px;
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+}
+
+.ha-sliderTrackThresh  {
+    background: linear-gradient(#081014, #152e37);
+    background: -moz-linear-gradient(#081014, #152e37);
+    background: -o-linear-gradient(#081014, #152e37);
+    background: -webkit-linear-gradient(#081014, #152e37);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ha-sliderHandleBorderUp {
+    background-image: linear-gradient(#76bae7, #375a7b);
+    background-image: -moz-linear-gradient(#76bae7, #375a7b);
+    background-image: -o-linear-gradient(#76bae7, #375a7b);
+    background-image: -webkit-linear-gradient(#76bae7, #375a7b);
+    border: solid 1px white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 28px;
+    left: -1px;
+    position: absolute;
+    top: 0;
+    width: 14px;
+}
+
+.ha-sliderHandleTween {
+    transition: transform 0.1s ease-in;
+    -o-transition: -o-transform 0.1s ease-in;
+    -webkit-transition: -webkit-transform 0.1s ease-in;
+}
+
+.ha-sliderHandleFillUp {
+    background-image: linear-gradient(rgba(21, 78, 115, 0.5),
+        rgba(19, 33, 40, 0.5));
+    background-image: -moz-linear-gradient(rgba(21, 78, 115, 0.5),
+        rgba(19, 33, 40, 0.5));
+    background-image: -o-linear-gradient(rgba(21, 78, 115, 0.5),
+        rgba(19, 33, 40, 0.5));
+    background-image: -webkit-linear-gradient(rgba(21, 78, 115, 0.5),
+        rgba(19, 33, 40, 0.5));
+    border: inset 1px rgba(51, 51, 51, 0.5);
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 4px;
+}
+
+.ha-sliderHandleBorderDown {
+    background-image: linear-gradient(#f16b6b, #991a1a);
+    background-image: -moz-linear-gradient(#f16b6b, #991a1a);
+    background-image: -o-linear-gradient(#f16b6b, #991a1a);
+    background-image: -webkit-linear-gradient(#f16b6b, #991a1a);
+}
+
+.ha-sliderHandleFillDown {
+    background-image: linear-gradient(rgba(139, 14, 14, 0.5),
+        rgba(30, 30, 30, 0.5));
+    background-image: -moz-linear-gradient(rgba(139, 14, 14, 0.5),
+        rgba(30, 30, 30, 0.5));
+    background-image: -o-linear-gradient(rgba(139, 14, 14, 0.5),
+        rgba(30, 30, 30, 0.5));
+    background-image: -webkit-linear-gradient(rgba(139, 14, 14, 0.5), 
+        rgba(30, 30, 30, 0.5));
+}
+
+/*-------------- HaRadioGroup Styles -------------*/
+.ha-button {
+    background-image: linear-gradient(white, #adbbc0);
+    background-image: -moz-linear-gradient(white, #adbbc0);
+    background-image: -o-linear-gradient(white, #adbbc0);
+    background-image: -webkit-linear-gradient(white, #adbbc0);
+    border: solid 2px #C8D0D7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s linear;
+}
+
+.ha-buttonText {
+    color: #333;
+    font: bold 16px Arial;
+    position: absolute;
+    text-shadow: 0 1px 0 white;
+    text-align: center;
+    width: 100%;
+}
+
+.ha-buttonDown {
+    background-image: linear-gradient(#adbbc0, white);
+    background-image: -moz-linear-gradient(#adbbc0, white);
+    background-image: -o-linear-gradient(#adbbc0, white);
+    background-image: -webkit-linear-gradient(#adbbc0, white);
+}
+
+.ha-buttonCrater {
+    background-image: linear-gradient(#9ba0a5, #e1e6eb);
+    background-image: -moz-linear-gradient(#9ba0a5, #e1e6eb);
+    background-image: -o-linear-gradient(#9ba0a5, #e1e6eb);
+    background-image: -webkit-linear-gradient(#9ba0a5, #e1e6eb);
+    border-radius: 7px;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 14px;
+}
+
+.ha-buttonCrater:after {
+    background-image: radial-gradient(#029801, #32482f);
+    background-image: -moz-radial-gradient(#029801, #32482f);
+    background-image: -o-radial-gradient(#029801, #32482f);
+    background-image: -webkit-radial-gradient(#029801, #32482f);
+    border-radius: 5px;
+    content: '';
+    height: 10px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 10px;
+}
+
+.ha-buttonLight {
+    background-image: radial-gradient(#f2f4f5 1px, #00ff00);
+    background-image: -moz-radial-gradient(#f2f4f5 1px, #00ff00);
+    background-image: -o-radial-gradient(#f2f4f5 1px, #00ff00);
+    background-image: -webkit-radial-gradient(#f2f4f5 1px, #00ff00);
+    border-radius: 5px;
+    box-shadow: 0 0 8px #00ff00, 0 0 8px #00ff00;
+    height: 10px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    -webkit-transition: opacity 0.1s linear;
+    width: 10px;
+    z-index: 1;
+}
+
+/*-------------- HaRadioGroup Styles -------------*/
+.ha-radioGroup {
+    background-color: #c8d0d7;
+    border: solid 2px #c8d0d7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s linear;
+}
+
+.ha-radioButton {
+    background-color: #adbbc0;
+    background-image: linear-gradient(white, #adbbc0);
+    background-image: -moz-linear-gradient(white, #adbbc0);
+    background-image: -o-linear-gradient(white, #adbbc0);
+    background-image: -webkit-linear-gradient(white, #adbbc0);
+    clip: rect(0, 100%, 100%, 0);
+    cursor: pointer;
+    display: table;
+    margin: 0;
+    position: relative;
+
+    color: rgba(48, 48, 48, 1);
+    font: bold 16px Arial;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.ha-horizontalRadioGroup {
+    float: left;
+}
+
+.ha-horizontalRadioGroup:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.ha-horizontalRadioGroup:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.ha-horizontalRadioGroup:nth-child(n+2) {
+    margin: 0 0 0 1px;
+}
+
+.ha-verticalRadioGroup {
+    float: none;
+}
+
+.ha-verticalRadioGroup:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+.ha-verticalRadioGroup:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+.ha-verticalRadioGroup:nth-child(n+2) {
+    margin: 1px 0 0 0;
+}
+
+.ha-radioButton > * {
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.ha-radioButtonSelected {
+    background-color: #adbbc0;
+    background-image: linear-gradient(#adbbc0, white 42%, 
+        white 58%, #adbbc0);
+    background-image: -moz-linear-gradient(#adbbc0, white 42%, 
+        white 58%, #adbbc0);
+    background-image: -o-linear-gradient(#adbbc0, white 42%, 
+        white 58%, #adbbc0);
+    background-image: -webkit-linear-gradient(#adbbc0, #eee 42%, 
+        #eee 58%, #adbbc0);
+    cursor: default;
+    box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ha-horizontalRadioGroup.ha-radioButtonSelected:first-child {
+    box-shadow: inset 1px 1px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 1px 1px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ha-horizontalRadioGroup.ha-radioButtonSelected:last-child {
+    box-shadow: inset -1px 1px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset -1px 1px 8px 0px rgba(0, 0, 0, 0.75);
+}

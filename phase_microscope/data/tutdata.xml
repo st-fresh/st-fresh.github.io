@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specimen>
+  <image>
+       <name>Cheek Cells</name>
+	<specimenpath>images/samples/cheek</specimenpath>
+	<ringpath>images/background</ringpath>
+  </image>
+  <image>
+	<name>Chinese Hamster Ovary</name>
+	<specimenpath>images/samples/ovary</specimenpath>
+	<ringpath>images/background</ringpath>
+  </image>
+  <image>
+	<name>Closterium</name>
+	<specimenpath>images/samples/closterium</specimenpath>
+	<ringpath>images/background</ringpath>
+  </image>
+  <image>
+	<name>Human Lung Carcinoma</name>
+	<specimenpath>images/samples/lung</specimenpath>
+	<ringpath>images/background</ringpath>
+  </image>
+  <image>
+	<name>Mixed Desmids</name>
+	<specimenpath>images/samples/desmids</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+  <image>
+	<name>Neuroblastoma</name>
+	<specimenpath>images/samples/neuro</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+  <image>
+	<name>Orlon (Acrylic)</name>
+	<specimenpath>images/samples/orlon</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+  <image>
+	<name>Pinus Pollen</name>
+	<specimenpath>images/samples/pollen</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+  <image>
+	<name>Rabbit Muscle</name>
+	<specimenpath>images/samples/rabbit</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+  <image>
+	<name>Starfish</name>
+	<specimenpath>images/samples/starfish</specimenpath>
+	<ringpath>images/ring</ringpath>
+  </image>
+</specimen>

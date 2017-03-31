@@ -43,7 +43,7 @@ function startTutorial() {
     var phaseStart     = true;
     var _WIDTH_HEIGHT  = 208;
     var once           = true;
-    var _blurImageDataObjectColor;
+    var blurImageDataObjectColor;
     var _blurImageDataObjectGrey;
     var scopeIndex;
     var maskImg = new Image();
@@ -206,7 +206,7 @@ function startTutorial() {
         mtx.drawImage(maskImg, 0, 0);
         toptx.drawImage(_specimenImage, 0, 0);
         btmtx.drawImage(_grey, 0, 0);
-        _blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
         _blurImageDataObjectGrey  = btmtx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
         blurCanvases(phaseMode);
         if (phaseMode == 1){
@@ -274,7 +274,7 @@ function startTutorial() {
             break;
         }
 
-        _blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
         _blurImageDataObjectGrey  = btmtx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
         adjustCanvasesBrightness();
          
@@ -293,7 +293,7 @@ function startTutorial() {
         var outputImageDataGrey  = btmtx.createImageData(_WIDTH_HEIGHT, _WIDTH_HEIGHT);
         
         var colorData = initData();
-        colorData     = _blurImageDataObjectColor.data;
+        colorData     = blurImageDataObjectColor.data;
         var greyData  = _blurImageDataObjectGrey.data;
 
         var outDataColor = outputImageDataColor.data;

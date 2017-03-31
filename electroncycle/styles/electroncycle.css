@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+    height: 340px;
+    text-align: center;
+}
+
+.bottomText {
+	position: absolute;
+	top:211px;
+	left: 0px;
+	width: 100%;
+	z-index: 99;
+}
+
+#eScreen {
+	position: absolute;
+	top: 10px;
+	left: 32px;
+}
+
+#centerit {
+ position: absolute;
+ width: 360px;
+ height: 258px;
+ top: 65%;
+ left: 46%;
+ margin: -169px 0px 0px -165px;
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: 0 0 7px white;
+}
+
+/*.ha-whiteWindow {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 7px white;
+	margin: 20px;
+	height: 228px;
+	width: 360px;
+	top: 61px;
+	left: 23px;
+	z-index: 0;
+}*/
+
+#midTextA {
+	position: absolute;
+	width: 100%;
+	top:110px;
+	left:0px;
+	background-color: #ffffff;
+	z-index: 99;
+}
+
+.topText {
+	position: absolute;
+	top:6px;
+	left: 0px;
+	z-index: 99;
+	width: 100%;
+}
+
+.tutorialTitle {
+	height: 45px;
+}
+
+#wScreen {
+	position: absolute;
+	top: 10px;
+	left: 32px;
+	z-index: -1;
+}

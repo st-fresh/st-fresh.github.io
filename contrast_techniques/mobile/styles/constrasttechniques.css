@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+body {
+    height: 466px;
+    text-align: center;
+}
+
+.tutorialTitle {
+	height: 42px;
+}
+
+.canvasContainer {
+	display: inline-block;
+	margin-top: 20px;
+
+}
+
+.sceneContainer {
+	height: 490px;
+  width: 490px;
+  position: absolute;
+  left: 0;
+  top: -21px;
+}
+
+.controlBack {
+	bottom: 12px;
+	height: 142px;
+}
+
+.controlPanelBack {
+	height: 132px;
+	margin-top: 5px;
+	position: absolute;
+	width: 100%;
+}
+#gridCanvas {
+	position: absolute;
+  top: 89px;
+  left: 72px;
+}
+
+
+#samplePanelLeft {
+	left: 5px;
+	vertical-align: 
+}
+
+#samplePanelRight {
+	right: 33px;
+}
+
+#plotCanvas {
+  position: absolute;
+  top: 89px;
+  left: 71px;
+}
+
+.row {
+	margin-top: 5px;
+}
+
+.btn:first-child {
+  margin-right: 20px;
+}
+
+.btn {
+	display: inline-block;
+	width: 195px;
+	height: 30px;
+}
+
+.diagramTextBlack {
+	position: absolute;
+		z-index: 1;
+}
+
+#L1 {
+	top: 175px;
+	left: 149px;
+	visibility: visible;
+
+}
+#L2 {
+	top: 176px;
+	left: 201px;
+	visibility: hidden;
+}
+#L3 {
+	top: 199px;
+	left: 135px;
+	visibility: hidden;
+}
+#L4 {
+	top: 161px;
+	left: 77px;
+	visibility: hidden;
+}
+#L5 {
+	top: 118px;
+	left: 183px;
+	visibility: hidden;
+}
+#L6 {
+	top: 166px;
+	left: 264px;
+	visibility: hidden;
+}
+
+.labelAbsolute {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.diagramTextWhite {
+	position: absolute;
+}
+
+.lblBottomTitle {
+	top:312px;
+	left:109px;
+}
+
+.lblSideTitle {
+	top:183px;
+	left:-18px;
+	transform:rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  -webkit-transform: rotate(-90deg);
+}
+
+.oneZeroX {
+	top:83px;
+	left:50px;
+}
+
+.zeroFiveX {
+	top:184px;
+	left:52px;
+}
+
+.ZeroX {
+	top:296px;
+	left:64px;
+}
+
+.ZeroY {
+	top:283px;
+	left:50px;
+}
+
+.oneZeroX {
+	top:295px;
+	left:124px;
+}
+
+.twoZeroX {
+	top:295px;
+	left:184px;
+}
+
+.threeZeroX {
+	top:295px;
+	left:244px;
+}
+
+.fourZeroX {
+	top:295px;
+	left:304px;
+}
+
+.fiveZeroX {
+	top:295px;
+	left:363px;
+}
+
+.lines {
+	position: absolute;
+	z-index: 1;
+	display: inline-block;
+	background-color: black;
+}	
+
+.xAxisLine {
+  height:2px;
+  width: 301px;
+  top: 288px; 
+  left: 71px;
+}
+
+.yAxisLine {
+  height:2px;
+  width: 200px;
+  top: 188px; 
+  left: -28px;
+  transform:rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  -webkit-transform: rotate(-90deg);
+}
+
+.yNotchA {
+  height:2px;
+  width: 301px;
+  top: 88px; 
+  left: 71px;
+}
+.yNotchB {
+  height:1px;
+  width: 10px;
+  top: 189px; 
+  left: 71px;
+}
+.xNotchA {
+   height: 10px;
+  width: 1px;
+top: 280px;
+  left: 132px
+}
+.xNotchB {
+  height: 10px;
+  width: 1px;
+top: 280px;
+  left: 192px
+}
+.xNotchC {
+  height: 10px;
+  width: 1px;
+top: 280px;
+  left: 252px
+}
+.xNotchD {
+  height: 10px;
+  width: 1px;
+top: 280px;
+  left: 312px
+}
+.xNotchE {
+  height: 202px;
+  width: 2px;
+top: 88px;
+  left: 371px
+}
+ 

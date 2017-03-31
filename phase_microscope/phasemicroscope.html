@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<HEAD>
+    
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/phasemicroscope.css" /> 
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/HaUtil.min.css">
+
+</HEAD>
+
+<BODY>
+
+	<DIV CLASS="mainscene">
+
+	    <CANVAS ID="tutorialTitle">Phase Plate/Ring Alignment</CANVAS>
+
+	    <DIV ID="centerit" CLASS="whiteWindow">
+	        
+	      <IMG ID="objective" DATA-SRC="images/objective.png"  /> 
+          
+          	<DIV CLASS="specWrap">
+              <CANVAS ID="hid" WIDTH="208" HEIGHT="208"></CANVAS>
+          	  <IMG ID="greyImage" WIDTH="208" HEIGHT="208"/>
+          	  <IMG ID="round-image" WIDTH="208" HEIGHT="208"/>
+              <CANVAS ID="bottom"></CANVAS>
+              <CANVAS ID="maskRing"></CANVAS>
+              <CANVAS ID="top"></CANVAS>
+          	</DIV>
+
+            <DIV CLASS="legendBackLeft labelBack">
+
+              <LABEL CLASS="diagramTextWhite objPos">Objective:</LABEL> <!-- objPos -->
+              <DIV ID="haHGroup">
+                <DIV>4x</DIV>
+                <DIV>10x</DIV>
+                <DIV>20x</DIV>
+                <DIV>40x</DIV>
+             </DIV>
+
+              <LABEL CLASS="diagramTextWhite casPos">Choose A Sample:</LABEL>
+                <SELECT ID="sampleDrop"></SELECT>
+            </DIV>
+
+            <DIV CLASS="legendBackRight labelBack">
+              
+              <LABEL CLASS="diagramTextWhite ptPos">Phase Telescope</LABEL> <!-- ptPos -->
+              <DIV ID="haVGroup">
+                <DIV>Out</DIV> <!-- btnOut -->
+                <DIV>In</DIV> <!-- btnIn -->
+              </DIV>
+
+              <DIV ID="btnReset">Reset</DIV> <!-- btnReset -->
+
+            </DIV>
+
+        </DIV>
+	    <DIV CLASS="controlBack">
+	    	
+	    	<DIV CLASS="controlPanelBack prpPosA"> <!-- prpPosA -->
+
+	    		<LABEL CLASS="prpPos diagramTextWhite">Phase Ring Position</LABEL> <!-- prpPos -->
+
+          <DIV ID="sliderX"></DIV> 
+	    		<LABEL CLASS="diagramTextWhite xLab">X</LABEL>
+
+          <DIV ID="sliderY"></DIV> 
+	    		<LABEL CLASS="diagramTextWhite yLab">Y</LABEL>
+
+	    		<LABEL CLASS="diagramTextWhite focLab">Focus</LABEL>
+	    		<DIV ID="sliderF"></DIV> <!-- sxPosB -->
+
+	    		<LABEL ID="voltageRead" CLASS="diagramTextWhite"></LABEL>
+	    		<DIV ID="sliderV"></DIV> <!-- syPosB voltageRead -->
+	    		<LABEL CLASS="diagramTextWhite iLab">Illumination</LABEL>
+
+        </DIV>
+
+	    </DIV>
+
+	    <DIV ID="splashContainer"></DIV>
+	</DIV>
+    
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/TweenLite.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/CSSPlugin.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/EasePack.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/jquery.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/OlyUtil.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/HaUtil.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/phasemicroscope.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/stackBlur.js"></SCRIPT>
+</BODY>
+</HTML>

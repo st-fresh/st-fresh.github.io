@@ -1,27 +1,27 @@
 function startTutorial() {
-    var _btn           = new OlyButton("btnReset");
-    var _grey          = document.getElementById("greyImage");
-    var _specimenImage = document.getElementById("round-image");
-    var _dropDown      = document.getElementById("sampleDrop");
+    var btn           = new OlyButton("btnReset");
+    var grey          = document.getElementById("greyImage");
+    var specimenImage = document.getElementById("round-image");
+    var dropDown      = document.getElementById("sampleDrop");
     var vRead          = document.getElementById("voltageRead");
     var mask           = document.getElementById("maskRing");
     var mtx            = mask.getContext("2d");
-    var _sliderX       = new OlySlider("sliderX", {orientation:"vertical"}); //x
-    var _sliderY       = new OlySlider("sliderY", {orientation:"vertical"}); //y
-    var _sliderF       = new OlySlider("sliderF", {orientation:"vertical"}); //focus
-    var _sliderV       = new OlySlider("sliderV", {orientation:"vertical"}); //voltage
-    var _outInGroup    = new HaRadioGroup("haVGroup", {orientation: "vertical"});
-    var _objGroup      = new HaRadioGroup("haHGroup"); //magnification buttons
+    var sliderX       = new OlySlider("sliderX", {orientation:"vertical"}); //x
+    var sliderY       = new OlySlider("sliderY", {orientation:"vertical"}); //y
+    var sliderF       = new OlySlider("sliderF", {orientation:"vertical"}); //focus
+    var sliderV       = new OlySlider("sliderV", {orientation:"vertical"}); //voltage
+    var outInGroup    = new HaRadioGroup("haVGroup", {orientation: "vertical"});
+    var objGroup      = new HaRadioGroup("haHGroup"); //magnification buttons
     var maskIndex      = ["images/background4.png", "images/background10.png", "images/background20.png", "images/background40.png"];
-    var _imagePaths    = [];
-    var _mags          = ["4x0","10x0","20x0","40x0"];
-    var _splash        = OlySplash(initialize, _imagePaths);
-    var _specimen      = [];
+    var imagePaths    = [];
+    var mags          = ["4x0","10x0","20x0","40x0"];
+    var splash        = OlySplash(initialize, imagePaths);
+    var specimen      = [];
     var phaseMode      = 0; //starts at 0 because tut initializes with "Out" toggled
     var srcData        = [];
-    var _rings         = [];
-    var _ringsBack     = [];
-    var _ringsFore     = [];
+    var rings         = [];
+    var ringsBack     = [];
+    var ringsFore     = [];
     var start          = 1; //controls dropHandler's first execution
     var hW             = 70; // half width of ring range
     var blur           = 0;
@@ -41,18 +41,18 @@ function startTutorial() {
     var startUp        = true;
     var handStart      = true;
     var phaseStart     = true;
-    var _WIDTH_HEIGHT  = 208;
+    var WIDTHHEIGHT  = 208;
     var once           = true;
     var blurImageDataObjectColor;
-    var _blurImageDataObjectGrey;
+    var blurImageDataObjectGrey;
     var scopeIndex;
     var maskImg = new Image();
 
     function initialize() {
-        _sliderF.setPosition(Math.random());
-        _sliderV.setPosition(Math.random());
-        _sliderX.setPosition(Math.random());
-        _sliderY.setPosition(Math.random());
+        sliderF.setPosition(Math.random());
+        sliderV.setPosition(Math.random());
+        sliderX.setPosition(Math.random());
+        sliderY.setPosition(Math.random());
         MEUtil.upscaleCanvas("top", 1);
         MEUtil.upscaleCanvas("bottom", 1);
         MEUtil.upscaleCanvas("maskRing", 1);
@@ -60,12 +60,12 @@ function startTutorial() {
 
         loadData(function() {
             adListeners();
-            _outInGroup.setSelectedIndex(0);
-            _objGroup.setSelectedIndex(3);  
+            outInGroup.setSelectedIndex(0);
+            objGroup.setSelectedIndex(3);  
             initData();
             magChange();
             MEUtil.raf(enterFrameHandler);
-            _splash.fadeOut();
+            splash.fadeOut();
         })
     }
 
@@ -88,12 +88,12 @@ function startTutorial() {
             var s1, s2;
             option.text  = $this.find("name").text();
             option.value = $this.find("specimenpath").text();
-            _specimen.push(new SpecimenPath(option.value, ".jpg"));
-            _rings.push(new SpecimenPath($this.find("ringpath").text(), ".png"));
-            _dropDown.appendChild(option);
+            specimen.push(new SpecimenPath(option.value, ".jpg"));
+            rings.push(new SpecimenPath($this.find("ringpath").text(), ".png"));
+            dropDown.appendChild(option);
         });
-            _ringsBack = _rings.splice(0, 4);
-            _ringsFore = _rings.splice(2, 9);
+            ringsBack = rings.splice(0, 4);
+            ringsFore = rings.splice(2, 9);
     }
 
     function checkImageCounter(numImages, callback) {
@@ -105,31 +105,31 @@ function startTutorial() {
 
     function adListeners() {
         //DROPDOWN SELECTION
-        _dropDown.onchange = function() {
+        dropDown.onchange = function() {
             magChange();
             randomizer(phaseMode);
         };
 
         //RESET BUTTON
-        _btn.ontouch = function() {
+        btn.ontouch = function() {
             randomizer(phaseMode);
         } 
 
         //MAG BUTTON GROUP
-        _objGroup.onchange = function() {
+        objGroup.onchange = function() {
             // if (!startUp) {
                 magChange();
             // }
             // startUp = false;
         };
         //BLUR ONTOUCHEND
-        _sliderF.ontouchend = function(event) {
+        sliderF.ontouchend = function(event) {
             blurCanvases(phaseMode);
         };
 
         //OUT IN BUTTON GROUP
-        _outInGroup.onchange = function() {
-            scopeIndex = _outInGroup.getSelectedIndex();
+        outInGroup.onchange = function() {
+            scopeIndex = outInGroup.getSelectedIndex();
             switch (scopeIndex) 
             {
                 case 0:
@@ -152,10 +152,10 @@ function startTutorial() {
         var ynew = Math.random(); 
         var vnew = Math.random();
         var fnew = Math.random(); 
-        _sliderX.setPosition(xnew);
-        _sliderY.setPosition(ynew);
-        _sliderV.setPosition(vnew);
-        _sliderF.setPosition(fnew);
+        sliderX.setPosition(xnew);
+        sliderY.setPosition(ynew);
+        sliderV.setPosition(vnew);
+        sliderF.setPosition(fnew);
         if (pm == 0) {
             blendCanvases();
             blurCanvases(pm);
@@ -169,11 +169,11 @@ function startTutorial() {
     function magChange() { //add to objGroup.onchange
         counter = 0;
         if (phaseMode == 0) {
-            _specimenImage.onload = _grey.onload = function() {
+            specimenImage.onload = grey.onload = function() {
                 checkImageCounter(2, imagesComplete);
             };
         }else {
-            _specimenImage.onload = _grey.onload = maskImg.onload = function() {
+            specimenImage.onload = grey.onload = maskImg.onload = function() {
                 checkImageCounter(3, imagesComplete);
             };
         }
@@ -181,33 +181,33 @@ function startTutorial() {
         if (phaseMode == 0 && start == 1) {
             start = "started"; //alters start var to a string which keeps magChange from running this first if ever again
             var startIndex          = Math.round(Math.random()*9);
-            _dropDown.selectedIndex = startIndex;
-            var firstPath           = _dropDown.value;
-            _specimenImage.src      = firstPath + "40x0.jpg";
-            _grey.src               = firstPath + "40x1.jpg";
+            dropDown.selectedIndex = startIndex;
+            var firstPath           = dropDown.value;
+            specimenImage.src      = firstPath + "40x0.jpg";
+            grey.src               = firstPath + "40x1.jpg";
         }else if (phaseMode == 0)  {
-            var index          = _dropDown.selectedIndex;
-            var mag            = _objGroup.getSelectedIndex();
-            var newPath        = _specimen[index].getPath(mag); //_specimen[index] chooses a SpecimenPath object from the 8 created in parsexml 
-            _specimenImage.src = newPath.toString();     //and mag chooses an index in an array
-            _grey.src          = _specimen[index].greyPath(mag);
+            var index          = dropDown.selectedIndex;
+            var mag            = objGroup.getSelectedIndex();
+            var newPath        = specimen[index].getPath(mag); //specimen[index] chooses a SpecimenPath object from the 8 created in parsexml 
+            specimenImage.src = newPath.toString();     //and mag chooses an index in an array
+            grey.src          = specimen[index].greyPath(mag);
         }else if (phaseMode == 1) {
-            var mag            = _objGroup.getSelectedIndex();
+            var mag            = objGroup.getSelectedIndex();
             var maskPath       = maskIndex[mag];
-            var backPath       = _ringsBack[mag].getPath(mag); //could i do: SpecimenPath("images/background").getRpath(mag); ??
-            var ringPath       = _ringsFore[mag].getPath(mag); 
-            _grey.src          = backPath.toString();
-            _specimenImage.src = ringPath.toString();
+            var backPath       = ringsBack[mag].getPath(mag); //could i do: SpecimenPath("images/background").getRpath(mag); ??
+            var ringPath       = ringsFore[mag].getPath(mag); 
+            grey.src          = backPath.toString();
+            specimenImage.src = ringPath.toString();
             maskImg.src        = maskPath;
         } 
     }
 
     function imagesComplete() {
         mtx.drawImage(maskImg, 0, 0);
-        toptx.drawImage(_specimenImage, 0, 0);
-        btmtx.drawImage(_grey, 0, 0);
-        blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
-        _blurImageDataObjectGrey  = btmtx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        toptx.drawImage(specimenImage, 0, 0);
+        btmtx.drawImage(grey, 0, 0);
+        blurImageDataObjectColor = toptx.getImageData(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
+        blurImageDataObjectGrey  = btmtx.getImageData(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
         blurCanvases(phaseMode);
         if (phaseMode == 1){
             translateCanvases();
@@ -228,17 +228,17 @@ function startTutorial() {
 
     function translateCanvases() {
         topCan.style.opacity = 1.0;
-        x  = _sliderX.getPosition(hW, 0);
-        y  = _sliderX.getPosition(0, hW);
-        x2 = _sliderY.getPosition(0, hW);
-        y2 = _sliderY.getPosition(0, hW);
+        x  = sliderX.getPosition(hW, 0);
+        y  = sliderX.getPosition(0, hW);
+        x2 = sliderY.getPosition(0, hW);
+        y2 = sliderY.getPosition(0, hW);
         topCan.style.left = (x+x2-60) + "px";
         topCan.style.top  = (y+y2-75) + "px";
     }
 
     function blendCanvases(){
-        var vx   = Math.abs(_sliderX.getPosition(-1, 1));
-        var vy   = Math.abs(_sliderY.getPosition(-1, 1));
+        var vx   = Math.abs(sliderX.getPosition(-1, 1));
+        var vy   = Math.abs(sliderY.getPosition(-1, 1));
         var posX = (1 - vx);
         var posY = (1 - vy);
         var colorCanvasOpacity = posX/2 + posY/2;
@@ -247,54 +247,54 @@ function startTutorial() {
 
     function blurCanvases(pm){ //pm = phaseMode
         //whenever magChange runs it will reblur the image and this function is ran when that happens so that new blur data is obtained.
-        var blur  = Math.abs(_sliderF.getPosition(4, -4));
-        var blur2 = Math.abs(_sliderF.getPosition(-1, 1));
-        btmtx.clearRect(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
-        toptx.clearRect(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
-        mtx.clearRect(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        var blur  = Math.abs(sliderF.getPosition(4, -4));
+        var blur2 = Math.abs(sliderF.getPosition(-1, 1));
+        btmtx.clearRect(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
+        toptx.clearRect(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
+        mtx.clearRect(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
         mtx.drawImage(maskImg, 0, 0);
-        btmtx.drawImage(_grey, 0, 0);
-        toptx.drawImage(_specimenImage, 0, 0);
+        btmtx.drawImage(grey, 0, 0);
+        toptx.drawImage(specimenImage, 0, 0);
 
 
         switch(pm)
         {
             case 0: //OUT
-                stackBlurCanvasRGB("top", 0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT, blur);
-                stackBlurCanvasRGB("bottom", 0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT, blur);
+                stackBlurCanvasRGB("top", 0, 0, WIDTHHEIGHT, WIDTHHEIGHT, blur);
+                stackBlurCanvasRGB("bottom", 0, 0, WIDTHHEIGHT, WIDTHHEIGHT, blur);
             break;
 
             case 1: //IN
-                // btmtx.drawImage(_grey, 0, 0);
-                // toptx.drawImage(_specimenImage, 0, 0);
+                // btmtx.drawImage(grey, 0, 0);
+                // toptx.drawImage(specimenImage, 0, 0);
                 stackBlurImage("round-image", "top", blur, true);
                 stackBlurImage("greyImage", "bottom", blur, true);
-//targetCanvasID, top_x, top_y, width, height, radius 
+//targetCanvasID, topx, topy, width, height, radius 
                 stackBlurCanvasRGBA("maskRing", 0, 0, 208, 208, blur);
             break;
         }
 
-        blurImageDataObjectColor = toptx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
-        _blurImageDataObjectGrey  = btmtx.getImageData(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        blurImageDataObjectColor = toptx.getImageData(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
+        blurImageDataObjectGrey  = btmtx.getImageData(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
         adjustCanvasesBrightness();
          
     }
 
     function adjustCanvasesBrightness(){
-        vRead      = Math.round(Math.abs(_sliderV.getPosition(-12,0)));
+        vRead      = Math.round(Math.abs(sliderV.getPosition(-12,0)));
         voltageRead.innerHTML = "Voltage: " + vRead + "V";
 
         if (phaseMode == 1) {
-            var setting = _sliderV.getPosition(160, -100);
+            var setting = sliderV.getPosition(160, -100);
         }else {
-            var setting = _sliderV.getPosition(180, -140);
+            var setting = sliderV.getPosition(180, -140);
         }
-        var outputImageDataColor = toptx.createImageData(_WIDTH_HEIGHT, _WIDTH_HEIGHT);
-        var outputImageDataGrey  = btmtx.createImageData(_WIDTH_HEIGHT, _WIDTH_HEIGHT);
+        var outputImageDataColor = toptx.createImageData(WIDTHHEIGHT, WIDTHHEIGHT);
+        var outputImageDataGrey  = btmtx.createImageData(WIDTHHEIGHT, WIDTHHEIGHT);
         
         var colorData = initData();
         colorData     = blurImageDataObjectColor.data;
-        var greyData  = _blurImageDataObjectGrey.data;
+        var greyData  = blurImageDataObjectGrey.data;
 
         var outDataColor = outputImageDataColor.data;
         var outDataGrey  = outputImageDataGrey.data;
@@ -360,7 +360,7 @@ function startTutorial() {
     function initData() { // attempts to initialize colorData's type before colorData is used
         var hCan = document.getElementById("hid");
         var htx = hCan.getContext("2d");
-        htx.drawImage(_grey, 0,0);
+        htx.drawImage(grey, 0,0);
         var someData = htx.getImageData(0,0, 2, 2);
         var toReturn = someData.data;
         //colorData var must be init as .data or it can't function later: cannot read property 'data' of undef
@@ -373,8 +373,8 @@ function startTutorial() {
         this.basePath  = basePath;
         this.ext       = ext;
         this.specPaths = {
-            grey  :  this._createPaths("1"), //function returns an array
-            color :  this._createPaths("0") //therefore color = the array in _createPaths
+            grey  :  this.createPaths("1"), //function returns an array
+            color :  this.createPaths("0") //therefore color = the array in createPaths
         };
     }
     
@@ -386,7 +386,7 @@ function startTutorial() {
         return this.specPaths.grey[magIndex];
     };
     
-    SpecimenPath.prototype._createPaths = function(suffix) {
+    SpecimenPath.prototype.createPaths = function(suffix) {
         return [
             this.basePath + "4x" + suffix  + this.ext,
             this.basePath + "10x" + suffix + this.ext,
@@ -399,27 +399,27 @@ function startTutorial() {
        switch (phaseMode) 
        {
         case 0: //OUT
-            if (_sliderX.hasChanged || _sliderY.hasChanged) { 
+            if (sliderX.hasChanged || sliderY.hasChanged) { 
                 blendCanvases();
-                _sliderX.hasChanged = false;
-                _sliderY.hasChanged = false;
+                sliderX.hasChanged = false;
+                sliderY.hasChanged = false;
             }
-            else if(_sliderV.hasChanged){
+            else if(sliderV.hasChanged){
                 adjustCanvasesBrightness();
-                _sliderV.hasChanged = false;
+                sliderV.hasChanged = false;
             }
         break;
         
         case 1: //IN
-            if (_sliderX.hasChanged || _sliderY.hasChanged) {
+            if (sliderX.hasChanged || sliderY.hasChanged) {
                 translateCanvases();
-                _sliderX.hasChanged = false;
-                _sliderY.hasChanged = false;
-            }else if(_sliderV.hasChanged) {
-                // mtx.clearRect(0, 0, _WIDTH_HEIGHT, _WIDTH_HEIGHT);
+                sliderX.hasChanged = false;
+                sliderY.hasChanged = false;
+            }else if(sliderV.hasChanged) {
+                // mtx.clearRect(0, 0, WIDTHHEIGHT, WIDTHHEIGHT);
                 // mtx.drawImage(maskImg, 0, 0);
                 adjustCanvasesBrightness();
-                _sliderV.hasChanged = false;
+                sliderV.hasChanged = false;
             }
         break;
        }

@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+body {
+    height: 540px;
+    width: 705px;
+    text-align: center;
+}
+
+.absL {
+	position: absolute;
+	top: 218px;
+	right: 520px;
+	width: 310px;
+	transform:rotate(-90deg);
+  	-ms-transform: rotate(-90deg); 
+  	-webkit-transform: rotate(-90deg);
+}
+
+.canCan > canvas,
+.canCan > div {
+	width: 584px;
+	height: 252px;
+	position: absolute;
+	top: 31px;
+	left: 58px;
+} 
+
+.labRowTop {
+	position: relative;
+	top: 75px;
+	left: 4px;
+}
+
+.labRowBottom {
+	position: relative;
+	top: 326px;	
+	left: 6px;	
+}
+
+.mgnTop {
+	margin: 8px;
+}
+
+.mgnO {
+	margin: 13px;
+}
+
+.mgnBot {
+	margin: 3px;
+}
+
+.mgnLa {
+	position: absolute;
+	top: 12px;
+	left: 34px;
+}
+
+.mgnLb {
+	position: absolute;
+	top: 52px;
+	left: 34px;
+}
+
+.mgnLc {
+	position: absolute;
+	top: 91px;
+	left: 34px;
+}
+
+.mgnLd {
+	position: absolute;
+	top: 131px;
+	left: 34px;
+}
+
+.mgnLe {
+	position: absolute;
+	top: 171px;
+	left: 34px;
+}
+
+.mgnLf {
+	position: absolute;
+	top: 210px;
+	left: 34px;
+}
+
+.canCan {
+	position: relative;
+}
+
+
+.canCan > * {
+	position: absolute;
+	top: 31px;
+	left: 58px;
+}
+
+.labelPanel{
+	position: absolute;
+	top: 554px;
+	left: 49px;
+	padding-bottom: 5px;
+}
+
+.labelPanel > * {
+	vertical-align: middle;
+}
+
+.controlPanelText {
+	margin-top: 13px;
+}
+
+.samplePanelLeft {
+	margin-right: 40px;
+}
+
+.controlPanelBack {
+	display: inline-block;
+	height: 147px;
+	margin-top: 5px;
+	padding: 0 10px;
+	width: 160px;
+}
+
+.labelBack {
+	background: -moz-linear-gradient(top,  #1e5799 0%, #3c78ac 0%, #285084 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(0%,#3c78ac), color-stop(100%,#285084)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#3c78ac 0%,#285084 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1e5799 0%,#3c78ac 0%,#285084 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1e5799 0%,#3c78ac 0%,#285084 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1e5799 0%,#3c78ac 0%,#285084 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#285084',GradientType=0 ); /* IE6-9 */
+
+	-webkit-box-shadow: 0px 0px 10px #000033;
+	-moz-box-shadow:    0px 0px 10px #000033;
+	box-shadow:         0px 0px 10px #000033;
+}
+
+.labColRight {
+	position: relative;
+	bottom: 3px;
+	left: 8px;
+}
+
+.mgnRa {
+	position: absolute;
+	left: 640px;
+	top: 55px;
+}
+
+.mgnRb {
+	position: absolute;
+	left: 640px;
+	top:  93px;
+}
+
+.mgnRc {
+	position: absolute;
+	left: 640px;
+	top:  112px;
+}
+
+.mgnRd {
+	position: absolute;
+	left: 640px;
+	top:  128px;
+}
+
+.mgnRe {
+	position: absolute;
+	left: 640px;
+	top:  169px;
+}
+
+.mgnRf {
+	position: absolute;
+	left: 640px;
+	top:  194px;
+}
+
+.labColLeft {
+	position: relative;
+	left: 6px;
+}
+
+
+.cbA {
+	position: absolute;
+	bottom: 51px;
+	left: 46px;
+	width: 120px;
+	height: 44px;
+	border-radius: 6px;
+	padding-top: 12px;
+}
+
+.cbB {
+	position: absolute;
+	bottom: 51px;
+	left: 184px;
+	width: 120px;
+	height: 44px;
+	border-radius: 6px;
+	padding-top: 12px;
+
+}
+
+.cbC {
+	position: absolute;
+	bottom: 41px;
+	left: 322px;
+	width: 120px;
+	height: 69px;
+	border-radius: 6px;
+	padding-top: 12px;
+}
+
+.cbD {
+	position: absolute;
+	bottom: 41px;
+	left: 461px;
+	width: 106px;	
+	height: 69px;
+	border-radius: 6px;
+	padding-top: 12px;
+}
+
+#btn {
+	display: inline-block;
+	height: 26px;
+	position: relative;
+	margin-top: 5px;
+	width: 100px;
+}
+
+#slider {
+	display: inline-block;
+	position: relative;	
+	width: 100px;
+	margin-top: 5px;
+}
+
+#colorBox {
+	position: absolute;
+	top: 38px;
+	left: 23px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	height: 27px;
+	width: 60px;
+}
+
+.txt {
+	padding-top: 5px;
+	font-size: 11px;
+}
+
+.txtb {
+	padding-top: 5px;
+	font-size: 20px;
+}

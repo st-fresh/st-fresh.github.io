@@ -1,0 +1,53 @@
+[0]Java applet download is now in progress.
+[1]Please be patient until the applet is
+[2]completely loaded, at which time the
+[3]tutorial will appear in this window.
+
+[4]Birefringence
+
+[5]Thickness
+
+[6]mm
+
+[7]Path
+[8]Difference
+
+[9]nm
+
+[10]Interference
+[11]Color
+
+[12]Order
+
+[13]First
+[14]Second
+[15]Third
+[16]Fourth
+[17]Fifth
+[18]Sixth
+
+
+
+584 x 252
+
+
+diff 12 x 14
+
+top gradient: 3C78AC
+bottom gradient: 285084
+border-radius: 8px
+blur x 10px
+blur y 10px
+blur color 000033
+
+
+-webkit-box-shadow: 10px 10px 46px 0px rgba(41,12,41,1);
+-moz-box-shadow: 10px 10px 46px 0px rgba(41,12,41,1);
+box-shadow: 10px 10px 46px 0px rgba(41,12,41,1);
+
+rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+background: -webkit-linear-gradient(top, rgba(138,84,75,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: -o-linear-gradient(top, rgba(138,84,75,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: -ms-linear-gradient(top, rgba(138,84,75,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: linear-gradient(to bottom, rgba(138,84,75,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a544b', endColorstr='#e73827', GradientType=0 );

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<HEAD>
+    
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/michellevy.css" />
+
+</HEAD>
+
+<BODY>
+
+	<DIV CLASS="mainscene">
+
+	    <CANVAS ID="tutorialTitle">Michel-Levy Birefringence Chart<br />(Large Version)</CANVAS>
+		<DIV CLASS="canCan">
+			<CANVAS ID="strumCan"></CANVAS> 
+			<CANVAS ID="linesCan"></CANVAS>
+			<CANVAS ID="cursor"></CANVAS> 
+			<DIV ID="touchArea"></DIV>
+		</DIV>
+
+	</DIV>
+	    
+	    <DIV CLASS="labelPanel">
+	    	<DIV CLASS="cbA labelBack">
+	    		<LABEL CLASS="diagramTextWhite">Birefringence</LABEL><BR />
+	    		<LABEL ID="bire" CLASS="txtb diagramTextWhite"></LABEL>
+	    	</DIV>
+	    	<DIV CLASS="cbB labelBack">
+	    		<LABEL CLASS="diagramTextWhite">Thickness</LABEL><BR />
+	    		<LABEL ID="thick" CLASS="txtb diagramTextWhite"></LABEL>
+	    	</DIV>
+	    	<DIV CLASS="cbC labelBack">
+	    		<LABEL CLASS="diagramTextWhite">Path<br />Difference</LABEL><BR />
+	    		<LABEL ID="pdiff" CLASS="txtb diagramTextWhite"></LABEL><BR />
+	    		<LABEL ID="order" CLASS="txt diagramTextWhite"></LABEL>
+	    	</DIV>
+	    	<DIV CLASS="cbD labelBack">
+	    		<LABEL CLASS="diagramTextWhite">Interference<br /> Color</LABEL><BR />
+	    		<DIV ID="colorBox"></DIV>
+	    	</DIV>
+	    </DIV>
+	    <DIV CLASS="labRowTop">
+	    	<SPAN CLASS="diagramWhiteText">Birefringence (n<sub>1</sub> - n<sub>2</sub>)</SPAN><BR /><BR />
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.001</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.005</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.010</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.015</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.020</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.025</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.030</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.035</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.040</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.045</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.050</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnTop">0.055</SPAN>
+	    </DIV>
+	      <DIV CLASS="labRowBottom">
+	    	<SPAN CLASS="diagramWhiteText mgnO">First Order</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnO">Second Order</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnO">Third Order</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnO">Fourth Order</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnO">Fifth Order</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnO">Sixth Order</SPAN><BR /><BR />
+	    	<SPAN CLASS="diagramWhiteText mgnBot">100</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">300</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">500</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">565</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">700</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">900</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">1130</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">1300</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">1500</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">1690</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">1900</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">2100</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">2265</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">2500</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">2700</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">2820</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnBot">3100</SPAN><BR /><BR />
+	    	<SPAN CLASS="diagramWhiteText">Wavelength</SPAN>
+	    </DIV>
+	    <DIV CLASS="diagramWhiteText absL">Thickness of Thin Section in Millimeters</DIV>
+	    <DIV CLASS="labColLeft">
+	    	<SPAN CLASS="diagramWhiteText mgnLa">0.06</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnLb">0.05</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnLc">0.04</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnLd">0.03</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnLe">0.02</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnLf">0.01</SPAN>
+	    </DIV>
+	    <DIV CLASS="labColRight">
+	    	<SPAN CLASS="diagramWhiteText mgnRa">0.065</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnRb">0.070</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnRc">0.080</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnRd">0.090</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnRe">0.120</SPAN>
+	    	<SPAN CLASS="diagramWhiteText mgnRf">0.160</SPAN>
+	    </DIV>
+
+	    <DIV ID="splashContainer"></DIV>
+	</DIV>
+    
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/TweenLite.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/CSSPlugin.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/EasePack.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/jquery.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/OlyUtil.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/michellevy.js"></SCRIPT>
+</BODY>
+</HTML>

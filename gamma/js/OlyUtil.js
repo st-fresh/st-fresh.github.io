@@ -626,7 +626,7 @@ function OlySplash(callback, assets) {
             can.style.width = "100%";
             can.style.height = fontSize*lines+"px";
             can.style.margin = "15px auto";
-            can.style.display = "block";
+            can.style.display = "none";
             var ctx = MEUtil.upscaleCanvas("tutorialTitle").getContext("2d");
             var gradient = ctx.createLinearGradient(0, 0, 0, can.height);
 

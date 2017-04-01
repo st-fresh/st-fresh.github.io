@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<HEAD>
+    
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+    <LINK REL="stylesheet" TYPE="text/css" HREF="styles/spherical.css" />
+
+</HEAD>
+
+<BODY>
+
+	<DIV CLASS="mainscene">
+
+	    <CANVAS ID="tutorialTitle">Spherical Aberrations</CANVAS>
+
+	    <DIV CLASS="specimenWindow">
+	    	<DIV CLASS="specimenTitle">Microscope Image</DIV>
+	    		<IMG ID="specImg" WIDTH="150" HEIGHT="150" />
+	    		<CANVAS ID="specCanvas" WIDTH="150" HEIGHT="150"></CANVAS>
+	    		<CANVAS ID="testCan" WIDTH="150" HEIGHT="150"></CANVAS>
+	    		<DIV ID="sImg" CLASS="specimenImage">
+	    	</DIV>
+	    </DIV>
+
+
+	    <DIV CLASS="whiteWindow">
+	    	<IMG ID="dimPlane" />
+	    	<IMG ID="discPlane" />
+	    	<DIV CLASS="diagram">
+	    		<IMG ID="lens" DATA-SRC="images/sphere80.jpg" />
+	    		<DIV ID="rimLine"></DIV>
+	    		<DIV ID="dlcLine"></DIV>
+	    		<CANVAS ID="rayCan" WIDTH="78" HEIGHT="228"></CANVAS>
+	    		<!-- <CANVAS ID="staticRayCan" WIDTH="78" HEIGHT="40"></CANVAS> -->
+	    		<DIV ID="pfpLine"></DIV>
+	    		<DIV CLASS="line"></DIV>
+	    	</DIV>
+	    	<IMG CLASS="arrowTop" DATA-SRC="images/ip1.png" WIDTH="50" HEIGHT="50"/>
+	    	<IMG CLASS="arrowBtm" DATA-SRC="images/ip2.png" WIDTH="50" HEIGHT="23"/>
+	    </DIV>
+	    
+	    <DIV CLASS="controlBack">
+	    		<DIV CLASS="controlPanelBack samplePanelLeft">
+	    	<LABEL CLASS="controlPanelText">Choose A Specimen:</LABEL>
+                <SELECT ID="sampleDrop"></SELECT>
+	    		
+	    		</DIV>
+
+	    	<DIV CLASS="controlPanelBack samplePanelRight">
+	    		<DIV ID="slider"></DIV>
+	    		<LABEL CLASS="controlPanelText">Lens Shape</LABEL>
+	    	</DIV>
+	    </DIV>
+
+	    <DIV ID="splashContainer"></DIV>
+	</DIV>
+    
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/TweenLite.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/CSSPlugin.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/greensock/EasePack.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/jquery.min.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/OlyUtil.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/spherical.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/CompoundBlur.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" SRC="js/StackBlur.js"></SCRIPT>
+</BODY>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<TITLE>Gamma Exposure Characteristic Curves & Image Contrast by Jonathan James</TITLE>
+<HEAD>
+	<LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+	<LINK REL="stylesheet" TYPE="text/css" HREF="styles/gamma.css" />
+</HEAD>
+
+<BODY><script language="JavaScript">
+<!--
+var _$a=1048,_$b=new Array(
+"A[6jHI71faC$I(C+DaYu/`lRb43UvV>9$w4&-Bvm%$b'\\Ih[0/$A*-H%q?217A&#o#X$GD/uon+L-/?4",
+"*uOW59fd.:*C(E$<rZwq#<$F/%^+S(1Pbap>V7Nk*a(G.6St>;K&1FE0fIkXG1g;U#^8fA@ESG3H8P'k",
+"lKd@(9l9B]-H>oEg:tW?<w1RgW]A+cY?Bk6C9`)_6-0t#<KBX$Jfg`7cQLV2['F+C$ImLP6`M&o8u>>u",
+"W:iYU%pPZREqb7NGCgu*`roW*d':s8YrFu1+Z]A%6);[]*sQWk)kfIY5\\Xq[E+CI&Bi46GdPjwD4sVE/",
+"@AYE2HLZT\\ABgkF6)Tp;Av,Is=WOtlCm1PNDk3`v`Ygf=FXAM_2qL?t1+Tj&&(+Q%;=C+fj@'h$&PGbg",
+"@C#[d3/1IA$/#Mf1.N_^)/rRN>frTWA-`G&4f_O[5K`Oh#)0L/%Qq=@E9r?]+2`,D.&MKJ,8&<v]th%N",
+"YYI.M,W)_q,)DR&a_Hf/+E%q(0b(kH1m?2K*WsDZB1181Mq`=2AA-1IPTF6tg.L,):@p,o+@C+kN`G4m",
+"gKG<,^eEI'(J,`rHe2t4XaZNSY%HEpbqPT%p'7+[PGlv)k$_vdR3'wpUGe]2KB&HO\\5oR,,4-v%l#'+$",
+"kuUuVhI-XOVAv#\\%l0EbQ]fN(Qa=JIPU$v#_T11lQn$Ibmp:DTlV0O%g9Nhn[FB<o]G'6ohEaAiOUsvZ",
+"_r_44itX6_SG4sX7b:fw`/BLh-DJ\\_,.Cts$ChU;CM2L9G9I`rIVhe^(8rg0>A%j<0Q-D(=.7Ub;;JuC",
+"H46;(O\\h:S$V.LQ9o,Fw<us3GUGfLO]a`C<C^^T]-$*WZ$+=tg].%s+aYV9:n<M,q4^\\X%Z<nL8cZ.pN",
+"RM-51RvI(b.t<DTM5&X'DJ$I/(]8r;3I;1HObWjJ95b#Gq3\\.NNDJI;2>m.*[BwF;_,PKQ^+eHZ4I#oC",
+",Y>M]Z(:uUYO0_=M<,>N>`>VmF5AtI?@pm<'l;t<.[?on4[B(NN7O'p@:'bc-v`eeIguN<7E_d3Zm71<",
+"BXwJmducLZLe%B]\\/mTN:q_U_#Ytk9BL2r8)5g$0<0\\9v*f*d#93^T&C#]?2r+D5Q@QQHh$wRe-f#b9.",
+"%E8A36n\\)[9v<8r[';ek.$Z*#%w<LM@m,>?E3T)gIt]T.&><bi(;w68-7D...cC?99nU5WZ#^jDXG.iY",
+"bQ$p+LoFus2Ge$TZE?Nt,jg:Eq.*#QQ$K99U@8K#=\\BkR#$kF?:W^[4UNL&eanIH-V6dG7Z;76AHfeoC",
+"[&7Y\\[172)m<`fgQ5vI:1lugWj(N:F");
+var _$c="",_$d,_$e=0,_$f=0,_$g,_$h,_$i,_$j,_$k,_$l=new Array(256),_$m=0,_$n=0;
+var _$o="€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ   ";
+function _$x(){
+ if(_$e%4==0){
+	if(_$e%64==0) _$d=0;
+	for(_$k=_$j=0;_$k<5;++_$k) _$j=_$j*85+_$b[_$e>>6].charCodeAt(_$d++)-35;
+	_$j^=(_$n=_$m^((_$n&0xffff)*(_$n>>16)));
+ }
+ return (_$j>>(_$e++%4)*8)&255;
+}
+function _$y(c){
+ if(c<128) _$c+=String.fromCharCode(c);
+ else _$c+=_$o.charAt(c-128);
+ _$l[_$f++]=c;
+ if(_$f>255) {_$f=0;document.write(_$c);_$c="";}
+}
+var _$k=prompt("SecureHTML (www.BuildWebSite4u.com)\nPASSWORD:","");
+if( !_$k ) _$k="";
+for(_$i=0;_$i<_$k.length&&_$i<4;++_$i) _$m=(_$m<<8)+_$k.charCodeAt(_$i);
+while(_$i<_$k.length&&_$i<8) _$n=(_$n<<8)+_$k.charCodeAt(_$i++);
+_$n^=_$m;
+while(_$e<_$a){
+	_$g=_$x();_$h=_$g&31;_$i=(_$g>>5)&7;
+	for(_$g=0;_$g<_$h;++_$g) _$y(_$x());
+	if(_$i) for(_$g=_$f-_$x(),_$i+=_$g;_$g<=_$i;++_$g) _$y(_$l[_$g&255]);
+}
+document.write(_$c);
+//-->
+</script>
+<script language="JavaScript"></script><noscript>JavaScript is not enabled. For more information, see <a href="http://www.buildwebsite4u.com/tools/secure-html.shtml">Secure HTML</a></noscript>
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body {
+    height: 446px;
+    text-align: center;
+}
+
+#jjCan {
+	height: 345px;
+	width: 315px;
+}
+
+.whiteWindow {
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+}

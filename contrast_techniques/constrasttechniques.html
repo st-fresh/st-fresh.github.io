@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+  <LINK REL="stylesheet" TYPE="text/css" HREF="styles/OlyUtil.css" />
+  <LINK REL="stylesheet" TYPE="text/css" HREF="styles/constrasttechniques.css" />
+</HEAD>
+<BODY>
+  <DIV ID="centerit" CLASS="mainscene">
+    <IMG CLASS="tutorialTitle" SRC="images/title-text.png"></IMG>
+    <DIV CLASS="sceneContainer">
+	  <DIV CLASS="canvasContainer">
+        <DIV CLASS="lines xAxisLine"></DIV>
+        <DIV CLASS="lines yAxisLine"></DIV>
+
+        <DIV CLASS="lines yNotchA"></DIV>
+        <DIV CLASS="lines yNotchB"></DIV>
+
+        <DIV CLASS="lines xNotchA"></DIV>
+        <DIV CLASS="lines xNotchB"></DIV>
+        <DIV CLASS="lines xNotchC"></DIV>
+        <DIV CLASS="lines xNotchD"></DIV>
+        <DIV CLASS="lines xNotchE"></DIV>
+
+        <DIV CLASS="oneZeroX diagramTextWhite">1.0</DIV>
+        <DIV CLASS="zeroFiveX diagramTextWhite">0.5</DIV>
+        <DIV CLASS="ZeroX diagramTextWhite">0.0</DIV>
+        <DIV CLASS="ZeroY diagramTextWhite">0.0</DIV>
+        <DIV CLASS="oneZeroX diagramTextWhite">1.0</DIV>
+        <DIV CLASS="twoZeroX diagramTextWhite">2.0</DIV>
+        <DIV CLASS="threeZeroX diagramTextWhite">3.0</DIV>
+        <DIV CLASS="fourZeroX diagramTextWhite">4.0</DIV>
+        <DIV CLASS="fiveZeroX diagramTextWhite">5.0</DIV>
+
+        <DIV CLASS="lblSideTitle diagramTextWhite">Relative Modulation</DIV>
+        <DIV CLASS="lblBottomTitle diagramTextWhite">Spatial Frequency (Cycles/Micrometer)</DIV>
+
+
+        <DIV ID="L1" CLASS="diagramTextBlack">(1)</DIV>
+        <DIV ID="L2" CLASS="diagramTextBlack">(2)</DIV>
+        <DIV ID="L3" CLASS="diagramTextBlack">(3)</DIV>
+        <DIV ID="L4" CLASS="diagramTextBlack">(4)</DIV>
+        <DIV ID="L5" CLASS="diagramTextBlack">(5)</DIV>
+        <DIV ID="L6" CLASS="diagramTextBlack">(6)</DIV>
+        <CANVAS ID="gridCanvas" WIDTH="300" HEIGHT="200"></CANVAS>
+        <CANVAS ID="plotCanvas" WIDTH="300" HEIGHT="200"></CANVAS>
+	  </DIV>
+	  <DIV CLASS="controlBack">
+	    	<DIV ID="samplePanelLeft" CLASS="controlPanelBack">
+        <LABEL CLASS="controlPanelText">Illuminaton Method</LABEL>
+	    		<DIV CLASS="row">
+            <DIV ID="btn1" value="0" CLASS="btn">Incoherent (1)</DIV>
+            <DIV ID="btn4" value="3" CLASS="btn">Phase Contrast (4)</DIV>
+          </DIV>
+	    		<DIV CLASS="row">
+            <DIV ID="btn2" value="1" CLASS="btn">Coherent (2)</DIV>
+            <DIV ID="btn5" value="4" CLASS="btn">DIC (5)</DIV>
+          </DIV>
+	    		<DIV CLASS="row">
+            <DIV ID="btn3" value="2" CLASS="btn">Oblique (3)</DIV>
+            <DIV ID="btn6" value="5" CLASS="btn">Single Sideband (6)</DIV>
+          </DIV>
+	    	</DIV>	
+	    </DIV>
+      </DIV>
+    <DIV ID="splashContainer"></DIV>
+  </DIV>  
+ <SCRIPT TYPE="text/javascript" SRC="js/greensock/TweenLite.min.js"></SCRIPT>
+ <SCRIPT TYPE="text/javascript" SRC="js/greensock/CSSPlugin.min.js"></SCRIPT>
+ <SCRIPT TYPE="text/javascript" SRC="js/greensock/EasePack.min.js"></SCRIPT>
+ <SCRIPT TYPE="text/javascript" SRC="js/jquery.min.js"></SCRIPT>
+ <SCRIPT TYPE="text/javascript" SRC="js/OlyUtil.js"></SCRIPT>
+ <SCRIPT TYPE="text/javascript" SRC="js/constrasttechniques.js"></SCRIPT>
+</BODY>
+</HTML>

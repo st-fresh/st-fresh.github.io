@@ -105,11 +105,12 @@ body:hover {
 
 #tutorialTitle {
     margin: 15px auto;
-    position: relative;    
+    position: relative;  
+    display: none !important;
 }
 
 .tutorialTitle {
-    display: none;
+    display: none !important;
     height: 22px;
     margin: 15px auto;
     position: relative;

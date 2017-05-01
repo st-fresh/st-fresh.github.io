@@ -149,30 +149,25 @@ function startTutorial() {
     new Point(572, 180)
     ]; 
 
-    function initialize() { //#3/ This func is called when _splash is declared and called below on line 208
-        spectrum.src = "images/spectrum.jpg";//#3.I/ add to the spectrum object a new key called src with string value "..."
-        drawGrid(); //#3.II/ This is used to call the drawGrid(); func - which fires off and draws a new canvas -- see this happen below on line 211 
+    function initialize() {
+        spectrum.src = "images/spectrum.jpg";
+        drawGrid();
 
-        for (var i = 0; i < 6; i++) { //#3.III/ generate some stuff in arrays to use later as labels
+        for (var i = 0; i < 6; i++) {
             orderNames[i] = labels[0 + i];  
         }
 
-        updateLabels(114, 131); //#3.IV/ initialize the labels that show up at the beginning everytime you load the experience
+        updateLabels(114, 131);
 
-        strumCan.initImageData(); //#3.V/ with the strumCan (canvas) in mind call initImageData(); func -- this function is the result of the function noticed on line 8, the results of createCanObject("strumCan", "images/spectrum.jpg"); will fill in this object value on strumCan [ see what this creates but running console.log(strumCan); in your Chrome Inspector under [ Console ] // you just created canvases and drew on them
+        strumCan.initImageData();
 
-        for (var i = 0; i < 6; i++) { //#3.VI/ generate some more stuff in arrays to use later as labels
+        for (var i = 0; i < 6; i++) {
             orderNames[i] = labels[0 + i];
         }
 
-        var circTX = cursor.can.getContext("2d"); //#3.VII/ lets begin controlling our little circle that's just a canvas called cursor we created above on line 11: To test this using your Chrome DevTools:
-        //Write this under your [ Console ] tab and run each line one by one: 
-        //var remCurseWords = document.getElementById("cursor")
-        //undefined
-        //remCurseWords.style.display = "none";
-        //"none"
-        //Now look for the little blip - it's gone!
-        var cH = $(cursor.can).height();//#3.VIII/ At this point since the data loaded I should have enough to reverse engineer the problem with the phase_microscope experience and it's .data prop
+        var circTX = cursor.can.getContext("2d");
+        var cW = $(cursor.can).width();
+        var cH = $(cursor.can).height();
         circTX.fillStyle = "white";
         circTX.beginPath();
         circTX.arc(cW/2, cH/2, MEUtil.PIXEL_RATIO > 1 ? 3.25 : 3, 0, Math.PI*2); 
@@ -209,8 +204,8 @@ function startTutorial() {
                 onUp();
             }, true);
 
-    	MEUtil.raf(enterFrameHandler); //START MEUtils -- see MEUtil in OlyUil.js for details
-        _splash.fadeOut(); //#1: Based on initial declaration it's clear that this runs OlySplash above which passes this initalize function we're inside to OlySplash, so now OlySplash likely runs this function which declares everything inside of initialize, then #2 it passes the _imagePaths var too which initializes an array with a string that is termed a path-variable because the string contains a path, after that we see that fadeOut(); is used to call fadeOut which is also in a different js file but available to us and to every object
+    	MEUtil.raf(enterFrameHandler);
+        _splash.fadeOut();
     }
 
     function drawGrid() {

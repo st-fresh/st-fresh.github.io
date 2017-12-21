@@ -9,7 +9,7 @@ This means you must contact me to obtain a passcode : You can text my google # 8
 
 Added Quartz Media Chart
 
-Added Coding-Challenge Solution using ES6-7 and Node.js > https://oces6.glitch.me/
+Added Coding-Challenge Solution using ES6, AJAX, and Node.js > https://oces6.glitch.me/
 
 Added Github Card API using Node.js > https://githubcard.glitch.me : Note :  beewaaarreeee .. This was a teaching-aid for a student, it's heavy-laden with comments and beginner-content, was used to teach a teenager Node basics
 

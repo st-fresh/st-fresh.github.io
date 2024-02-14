@@ -1,5 +1,0 @@
-appletree
-scarkeloid
-puccinia
-tuber
-testes
